@@ -15,9 +15,42 @@
     <section class="{{post_class}}">
       {{content}}
     </section>
+	
+	<section class="post-share">
+        <h4>Share this post</h4>
+		
+  <ul class="share--social">
 
+
+  <!-- Twitter -->
+  <li class="share__item">
+    <a href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="icon icon-social-twitter"></i><span class="hidden">Twitter</span>
+        </a>
+  </li>
+
+    <!-- Facebook -->
+    <li class="share__item">
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="icon icon-social-facebook"></i><span class="hidden">Facebook</span>
+        </a>
+    </li>
+
+    <!-- Google+ -->
+    <li class="share__item">
+      <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <i class='icon icon-social-google-plus'></i>
+        <span class="hidden">Google+</span>
+      </a>
+    </li>
+
+  </ul>
+    </section>
   </article>
 
-  {{!-- {{> comments}} --}}
+  {{> comments}}
 
 {{/post}}
